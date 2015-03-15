@@ -31,6 +31,5 @@ for a in f:
 	            r = api.retweet(s.id)
 	            time.sleep(1800)
 	        else:
-	        	time.sleep(1800)
-
+	        	time.sleep(1900)
 
