@@ -14,19 +14,6 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 api = tweepy.API(auth)
 
-filename = open('congress_screen_names.txt','r')
-f = filename.readlines()
-filename.close()
+api.user_timeline('anmccartney')
 
-t = ['sorry',
-    'apologize',
-    'regret']
-
-for a in f:
-	a = a.rstrip()
-	timeline = api.user_timeline(a)
-	for status in timeline:
-		x = status.text
-		for i in t:
-			if i in x:
-				api.retweet(status.id)
+print dir(status)
